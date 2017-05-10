@@ -1,0 +1,36 @@
+.TH "xpybind" "1" "1.x.x" "" ""
+.SH "NAME"
+.LP 
+xpybind \- A utility for globally binding keyboard key sequences 
+in X to callable objects in a running Python interpreter 
+environment.
+.SH "SYNTAX"
+.LP 
+xpybind [\fIno options\fP] <\fIno arguments\fP>
+
+.SH "DESCRIPTION"
+.LP 
+xpybind \- A utility for globally binding emacs-like keyboard key 
+sequences in X to callable objects in a Python interpreter. These
+callable objects can do anything from launching programs, killing
+processes, edit xpybind's own configuration, and generally do
+anything that can be programmed from Python.
+.SH "FILES"
+.LP 
+\fI$HOME/.xpybind\fP 
+.SH "EXAMPLES"
+.LP 
+To use xpybind add it to your .xinitrc
+.LP
+xpybind's configuration is a python module with the pathname of
+$HOME/.xpybind, see xpybind(5).
+
+.SH "AUTHORS"
+.LP 
+Dan Aloni <da-x@colinux.org>
+.br 
+This manual page was written for Debian GNU/Linux by the above 
+mentioned name.
+.SH "SEE ALSO"
+.LP 
+xpybind(1)

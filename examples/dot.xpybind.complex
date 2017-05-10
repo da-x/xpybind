@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+#
+# emacs: python-mode 
+#
+
+import os, re
+
+from xpybind import KeySwitch, reload_user_config, exit
+from xpybind import KeyChain, KeyCompletion
+
+def system(command):
+    def wrapper():
+        os.system(command)
+    return wrapper
+
+def terminal(command):
+    return system(
+        ("rxvt-unicode -bg black -fg white -sl 8000 "
+         "--color4 %s --color12 %s -e %s &")
+        % ('\#4040b0', '\#4040b0', command))
+
+def dcop(command):
+    return system("dcop %s" % (command, ))
+
+def debug(str):
+    def wrapper(a):
+        return str
+    return wrapper
+
+amarok_pause = dcop('amarok player playPause')
+amarok_up = dcop('amarok player volumeUp')
+amarok_down = dcop('amarok player volumeDown')
+
+bindings = KeySwitch(
+    Menu=KeySwitch(
+        t=KeySwitch(
+             p=terminal('python'),
+             t=terminal('zsh'),
+             c=terminal('ssh -t user@somehost'),
+        ),
+        m=KeySwitch(
+             p=amarok_pause,
+             Pause=amarok_pause,
+             Up=amarok_up,
+             Down=amarok_down,
+             Left=dcop('amarok player prev'),
+             Right=dcop('amarok player next'),
+        ), 
+        r=reload_user_config,
+        Return=lambda:None,
+        Escape=exit,
+    )
+)

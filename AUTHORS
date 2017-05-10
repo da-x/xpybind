@@ -1,0 +1,9 @@
+Dan Aloni <da-x@colinux.org>
+
+---
+
+Some code in xpybind is based on work from the ratpoison 
+window manager and xemacs. Thanks to the respective people.
+
+ratpoison: http://www.nongnu.org/ratpoison/
+xemacs: http://www.xemacs.org/

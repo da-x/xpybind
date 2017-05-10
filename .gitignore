@@ -1,0 +1,4 @@
+build-stamp
+configure-stamp
+debian/xpybind
+*.pyc

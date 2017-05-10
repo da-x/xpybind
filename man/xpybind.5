@@ -1,0 +1,37 @@
+.TH "xpybind" "1" "1.x.x" "" ""
+.SH "NAME"
+.LP 
+$(HOME)/.pybind \- User configuration for xpybind
+.SH "SYNTAX"
+.LP 
+
+This file must adhere to Python's syntax, because it is evaluated
+by Python embedded in xpybind.
+
+The module needs to export only one list of tuples:
+
+keyboard_maps = [
+    ...
+    ("key1 key2", callable_object),
+    ...
+.br
+]    
+
+key - A combination of an X keysym and a emacs-like modifier: M-,
+C-, A-, S-, etc. For example: Return (Enter), C-d (Control-D), 
+C-S-Return (Control-Super-Return).
+
+.SH "EXMAPLES"
+.LP 
+
+TBD
+
+.SH "AUTHORS"
+.LP 
+Dan Aloni <da-x@colinux.org>
+.br 
+This manual page was written for Debian GNU/Linux by the above 
+mentioned name.
+.SH "SEE ALSO"
+.LP 
+xpybind(1)
