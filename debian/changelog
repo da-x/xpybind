@@ -4,11 +4,11 @@ xpybind (0.9.0-1) unstable; urgency=low
   * Changed .xpybind format to something more flexible. See README and
 	examples/ directory.
 
- -- Dan Aloni <da-x@monatomic.org>  Sat, 28 Apr 2007 18:46:19 +0200
+ -- Dan Aloni <alonid@gmail.com>  Sat, 28 Apr 2007 18:46:19 +0200
 
 xpybind (0.8.0-1) unstable; urgency=low
 
   * Initial release
 
- -- Dan Aloni <da-x@colinux.org>  Fri, 11 Jul 2003 19:31:01 +0300
+ -- Dan Aloni <alonid@gmail.com>  Fri, 11 Jul 2003 19:31:01 +0300
 

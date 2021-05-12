@@ -1,5 +1,10 @@
 # xpybind
 
+Note: this is code written back around 2003 with only slight mainainingship.
+
+An old version of it is still hosted on sourceforge.net.
+
+
 1. Preface
 
 Since the invention of GUI, the concept of 'hotkeys' was widely accepted as a
@@ -179,7 +184,3 @@ See the examples directory for more complete and useful configurations.
 After installing xpybind, run:
 
     python -c "import xpybind; help(xpybind)"
-
-5. Hacks and development
-
-[TBD]
