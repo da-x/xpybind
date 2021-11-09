@@ -392,7 +392,10 @@ void update_input_window(xpb_screen_t *s, const char *prompt,
 		int input_window_size;
 	} defaults;
 
+	// Load an old font from xorg-x11-fonts-misc like it's 2003
 	defaults.font = XLoadQueryFont(g_dpy, "9x15bold");
+	assert(defaults.font != NULL);
+
 	defaults.bar_x_padding = 0;
 	defaults.bar_y_padding = 0;
 	defaults.input_window_size = 20;
